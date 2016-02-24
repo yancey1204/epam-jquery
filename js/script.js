@@ -1,7 +1,7 @@
 // Note that the following is a shorthand for the DOMReady event
 $(function() {
 
-})
+});
 
 $("#prepend button").click(function() {
 	$("#prepend p").prepend("Yo! ");
@@ -43,14 +43,10 @@ $("#form2 button").click(function() {
 
 });
 
-// handle the mouse over event here
+// handle the mouseover event here
 
 // handle the form events here
 
-$("#form form").submit(function(event) {
-	event.preventDefault();
+$("#formEvents form").submit(function(event) {
 
-	debugger;
-
-	// log the values of the email, password, and checkbox (hint for the last one: $("#form input[type=checkbox]").prop("checked"))
 });

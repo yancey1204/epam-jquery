@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Bootstrap Playground</title>
+    <title>jQuery Playground</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -50,7 +50,10 @@
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
               <li class="active"><a href="index.html">Home</a></li>
-              <li><a href="bootstrap-css.html">jQuery API</a></li>
+              <li><a href="events.html">Events</a></li>
+              <li><a href="animations.html">Animations</a></li>
+              <li><a href="ajax.html">AJAX</a></li>
+              <li><a href="jquery-ui.html">jQuery UI</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
@@ -58,7 +61,7 @@
 
       <!-- Main component for a primary marketing message or call to action -->
       <div class="jumbotron">
-        <h1>jQuery Playground</h1>
+        <h1>jQuery DOM Manipulation</h1>
         <p>A place to begin getting familiar with jQuery... <span class="glyphicon glyphicon-thumbs-up"></span></p>
         <p>
       </div>
@@ -71,13 +74,15 @@
             </div>
             <div class="panel-body">
               <div id="prepend">
-                <blockquote>.prepend(content) some content to the following parpagraph</blockquote>
+                <blockquote>.prepend(content) - Insert content to the beginning of each matched element</blockquote>
+                <div class="alert alert-info" role="alert"><strong>Task:</strong> Prepend some content to the following paragraph.</div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est veniam consequuntur distinctio necessitatibus sapiente illo, doloremque, iure atque officiis totam mollitia earum laudantium unde sequi fugit. Quibusdam assumenda, amet nobis?</p>
                 <button class="btn btn-primary">Prepend</button>
               </div>
               <hr>
               <div id="before">
-                <blockquote>.before(content) - Insert content before all the following paragraphs</blockquote>
+                <blockquote>.before(content) - Insert content before all matched elements</blockquote>
+                <div class="alert alert-info" role="alert"><strong>Task:</strong> Insert content before all the following paragraphs.</div>
                 <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
                 <p>Aenean lacinia bibendum nulla sed consectetur.</p>
                 <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
@@ -97,12 +102,14 @@
             <div class="panel-body">
               <div id="css1">
                 <blockquote>.css(propertyName, rule) - Changes the inline CSS values for all matched elements</blockquote>
+                <div class="alert alert-info" role="alert"><strong>Task:</strong> Increase the font size of the following paragraph.</div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est veniam consequuntur distinctio necessitatibus sapiente illo, doloremque, iure atque officiis totam mollitia earum laudantium unde sequi fugit. Quibusdam assumenda, amet nobis?</p>
                 <button class="btn btn-primary">Add CSS Property</button>
               </div>
               <hr>
               <div id="css2">
                 <blockquote>.css({prop1: val1, prop2: val2}) - One argument: an object. Edit multiple properties at once</blockquote>
+                <div class="alert alert-info" role="alert"><strong>Task:</strong> Change the color and increase the font size of the following paragraph.</div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, earum eius quam soluta ipsam qui fugit. Natus soluta iure deserunt nobis, porro laborum molestiae labore, fugiat distinctio doloribus maxime dolorum.</p>
                 <button class="btn btn-primary">Add Multiple CSS Properties</button>
               </div>
@@ -120,12 +127,14 @@
             <div class="panel-body">
               <div id="attr1">
                 <blockquote>.attr(attributeName) - Retrieves the attribute value of the first matched element</blockquote>
-                <p><a href="http://www.baidu.com">Visit Baidu</a></p>
+                <div class="alert alert-info" role="alert"><strong>Task:</strong> Write the destination of the following anchor to the console.</div>
+                <p><a href="http://www.alibaba.com">Visit Baidu?</a></p>
                 <button class="btn btn-primary">Get the Attribute</button>
               </div>
               <hr>
               <div id="attr2">
                 <blockquote>.attr(attributeName, newValue) - Changes the value of attributeName to newValue</blockquote>
+                <div class="alert alert-info" role="alert"><strong>Task:</strong> Update the value of the destination of the following anchor.</div>
                 <p><a href="http://www.baidu.com">Visit Google</a></p>
                 <button class="btn btn-primary">Update the Attribute</button>
               </div>
@@ -142,13 +151,16 @@
             </div>
             <div class="panel-body">
               <div id="class1">
-                <blockquote>.addClass(className) - Add a class ("bg-primary") onto all matched elements</blockquote>
+                <blockquote>.addClass(className) - Add a class onto all matched elements</blockquote>
+                <div class="alert alert-info" role="alert"><strong>Task:</strong> Add a class ("bg-primary") onto all matched elements.</div>
                 <p>Donec sed odio dui.</p>
+                <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
                 <button class="btn btn-primary">Add the Class</button>
               </div>
               <hr>
               <div id="class2">
-                <blockquote>.hasClass(className) - Check to see if element below has the "lead" class applied to it.</blockquote>
+                <blockquote>.hasClass(className) - Checks if the matched element already has the className applied to it. Returns a boolean value.</blockquote>
+                <div class="alert alert-info" role="alert"><strong>Task:</strong> Check to see if element below has the "lead" class applied to it. Display "yes" in an alert if it has.</div>
                 <p class="lead">Cras mattis consectetur purus sit amet fermentum. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
                 <button class="btn btn-primary">Check for Class</button>
               </div>
@@ -166,15 +178,17 @@
             <div class="panel-body">
               <div id="form1">
                 <blockquote>.val() - Returns the value of the “value” attribute.</blockquote>
+                <div class="alert alert-info" role="alert"><strong>Task:</strong> Log the value to the console.</div>
                 <div class="form-group">
                   <label for="exampleInputEmail1">Email address</label>
                   <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
                 </div>
-                <button class="btn btn-primary">Log the value to the console</button>
+                <button class="btn btn-primary">Log the value to the console.</button>
               </div>
               <hr>
               <div id="form2">
                 <blockquote>.val(valueToSet) - Set the value of the “value” attribute</blockquote>
+                <div class="alert alert-info" role="alert"><strong>Task:</strong> Set the value of the following input to your name.</div>
                 <form class="form">
                   <div class="form-group">
                     <label for="exampleInputName2">Name</label>
@@ -188,67 +202,7 @@
         </div>
       </div>   
 
-      <div class="row">
-        <div class="col-md-12">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">Mouse Events</h3>
-            </div>
-            <div class="panel-body">
-              <div id="mouse">
-                <blockquote>mousemove - User has moved the mouse over the element</blockquote>
-                <img src="images/mouse.png" class="img-responsive" style="width: 20%;"> 
-              </div>
-              <hr>
-            </div>
-          </div>
-        </div>
-      </div>   
-
-      <div class="row">
-        <div class="col-md-12">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">Form Events</h3>
-            </div>
-            <div class="panel-body">
-              <div id="form">
-                <blockquote>submit, change, select, focus, blur</blockquote>
-                <p>Handle <strong>submit</strong> and a few other events on the form below...<br><br></p>
-                <form class="form-horizontal">
-                  <div class="form-group">
-                    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
-                    <div class="col-sm-10">
-                      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
-                    <div class="col-sm-10">
-                      <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-                      <div class="checkbox">
-                        <label>
-                          <input type="checkbox"> Remember me
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-                      <button type="submit" class="btn btn-default">Sign In</button>
-                    </div>
-                  </div>
-                </form>
-              </div>
-              <hr>
-            </div>
-          </div>
-        </div>
-      </div>              
+              
 
     </div> <!-- /container -->
 

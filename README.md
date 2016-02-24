@@ -1,3 +1,3 @@
-# jQuery
+# jQuery Playground
 
-Readme example :)
+Nothing to see here :)
