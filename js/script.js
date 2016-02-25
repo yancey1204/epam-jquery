@@ -50,9 +50,15 @@ $("#form2 button").click(function() {
 // handle the mouseover event here
 $(".img-responsive").mouseover(function(){
   $(this).css("transform","scale(1.5,1.5)");
-})
+});
 // handle the form events here
 
 $("#formEvents form").submit(function(event) {
-
+  event.preventDefault();
+  var email = $("#inputEmail3").val();
+  var password = $("#inputPassword3").val();
+  var ifRememberMe = $(".checkbox input[type=checkbox]").prop("checked");
+  console.log("email : ",email);
+  console.log("password : ",password);
+  console.log("ifRememberMe : ",ifRememberMe);
 });
