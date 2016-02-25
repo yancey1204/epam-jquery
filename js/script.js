@@ -48,7 +48,7 @@ $("#form2 button").click(function() {
 });
 
 // handle the mouseover event here
-$(".img-responsive").mouseover(function(){
+$(".animation1").mouseover(function(){
   $(this).css("transform","scale(1.5,1.5)");
 });
 // handle the form events here
@@ -61,4 +61,41 @@ $("#formEvents form").submit(function(event) {
   console.log("email : ",email);
   console.log("password : ",password);
   console.log("ifRememberMe : ",ifRememberMe);
+});
+
+// animation part
+
+// $("#animate1 img").mouseover(function(){
+//   $(this).animate({
+//       width: "70%",
+//     }, 1500,  "linear");
+// })
+
+$("#animate1 img").one("mouseover",function(){
+  $(this).animate({
+      width: "70%",
+    }, 1500);
+})
+
+
+var onRightSide = false;
+$("#animate2 img").dblclick(function(){
+  if(onRightSide === false){
+    $(this).animate({
+      marginLeft: "90%",
+    },1500,"linear");
+    onRightSide = true;
+  }else{
+    $(this).animate({
+      marginLeft: "0",
+    },1500,"linear");
+    onRightSide = false;
+  }
+})
+
+$("#animate3 .mouse").click(function(){
+  $(this).fadeOut();
+  $("#animate3 .cat").fadeIn();
+
+
 });
